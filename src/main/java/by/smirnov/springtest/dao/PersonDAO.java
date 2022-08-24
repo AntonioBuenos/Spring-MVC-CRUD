@@ -11,7 +11,7 @@ import java.util.List;
 public class PersonDAO {
     private static int PEOPLE_COUNT;
 
-    private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
+    private static final String URL = "jdbc:postgresql://localhost:5432/db1";
     private static final String USERNAME = "postgres";
     private static final String PASSWORD = "root";
 
@@ -33,36 +33,54 @@ public class PersonDAO {
 
     public List<Person> index() {
         List<Person> people = new ArrayList<>();
-        try {
-            Statement statement = connection.createStatement();
+
+        try (Statement statement = connection.createStatement()){
             String SQL = "SELECT * FROM person";
             ResultSet resultSet = statement.executeQuery(SQL);
+
             while (resultSet.next()) {
                 Person person = new Person();
+
                 person.setId(resultSet.getInt("id"));
-                person.setName(resultSet.getNString("name"));
+                person.setName(resultSet.getString("name"));
+                person.setEmail(resultSet.getString("email"));
                 person.setAge(resultSet.getInt("age"));
-                person.setEmail(resultSet.getNString("email"));
 
                 people.add(person);
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
+
         return people;
     }
 
     public Person show(int id) {
-        //return people.stream().filter(person -> person.getId() == id).findAny().orElse(null);
-        return new Person();
+        Person person = null;
+
+        try (PreparedStatement statement = connection.prepareStatement("SELECT FROM person WHERE id=?")){
+
+            statement.setInt(1, id);
+            ResultSet resultSet = statement.executeQuery();
+            resultSet.next();
+            person = new Person();
+            person.setId(resultSet.getInt("id"));
+            person.setName(resultSet.getString("name"));
+            person.setAge(resultSet.getInt("age"));
+            person.setEmail(resultSet.getString("email"));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return person;
     }
 
     public void save(Person person) {
-        try {
-            Statement statement = connection.createStatement();
-            String SQL = "INSERT INTO person VALUES(" + 1 + ", '" + person.getName() + "'," +
-                    person.getAge() +  ",'" + person.getEmail() + "')'";
-            statement.executeUpdate(SQL);
+        try (PreparedStatement statement = connection.prepareStatement("INSERT INTO person VALUES(1, ?, ?, ?)")){
+            statement.setString(1, person.getName());
+            statement.setInt(2, person.getAge());
+            statement.setString(3, person.getEmail());
+            statement.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -70,14 +88,27 @@ public class PersonDAO {
     }
 
     public void update(int id, Person updatedPerson) {
-        Person personToBeUpdated = show(id);
+        try (PreparedStatement statement = connection.prepareStatement
+                ("UPDATE person SET name=?, age=?, email=? WHERE id=?")){
+            statement.setString(1, updatedPerson.getName());
+            statement.setInt(2, updatedPerson.getAge());
+            statement.setString(3, updatedPerson.getEmail());
+            statement.setInt(4, updatedPerson.getId());
 
-        personToBeUpdated.setName(updatedPerson.getName());
-        personToBeUpdated.setAge(updatedPerson.getAge());
-        personToBeUpdated.setEmail(updatedPerson.getEmail());
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void delete(int id) {
-//        people.removeIf(p -> p.getId() == id);
+        try (PreparedStatement statement = connection.prepareStatement
+                ("DELETE FROM person WHERE id=?")){
+            statement.setInt(1, id);
+
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

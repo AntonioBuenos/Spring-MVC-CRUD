@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="965f18a4-4f5b-4f81-a5e7-250d7608938a" name="Changes" comment="@Valid">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="965f18a4-4f5b-4f81-a5e7-250d7608938a" name="Changes" comment="JDBC">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/smirnov/springtest/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/smirnov/springtest/dao/PersonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +203,7 @@
       <option name="presentableId" value="Default" />
       <updated>1661241998847</updated>
       <workItem from="1661242000591" duration="4417000" />
-      <workItem from="1661287791080" duration="16512000" />
+      <workItem from="1661287791080" duration="21029000" />
     </task>
     <task id="LOCAL-00001" summary="DAO">
       <created>1661245839381</created>
@@ -234,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661334309101</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="JDBC">
+      <created>1661338382151</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661338382151</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +262,7 @@
     <MESSAGE value="@ModelAttribute &amp; Forms" />
     <MESSAGE value="Finishing CRUD for Servlet part" />
     <MESSAGE value="@Valid" />
-    <option name="LAST_COMMIT_MESSAGE" value="@Valid" />
+    <MESSAGE value="JDBC" />
+    <option name="LAST_COMMIT_MESSAGE" value="JDBC" />
   </component>
 </project>
