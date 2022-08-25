@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="965f18a4-4f5b-4f81-a5e7-250d7608938a" name="Changes" comment="JDBC Template">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="965f18a4-4f5b-4f81-a5e7-250d7608938a" name="Changes" comment="Properties" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -201,7 +199,7 @@
       <option name="presentableId" value="Default" />
       <updated>1661241998847</updated>
       <workItem from="1661242000591" duration="4417000" />
-      <workItem from="1661287791080" duration="25383000" />
+      <workItem from="1661287791080" duration="25717000" />
     </task>
     <task id="LOCAL-00001" summary="DAO">
       <created>1661245839381</created>
@@ -252,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661382991673</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Properties">
+      <created>1661460756045</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1661460756045</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +282,7 @@
     <MESSAGE value="JDBC" />
     <MESSAGE value="PreparedStatement" />
     <MESSAGE value="JDBC Template" />
-    <option name="LAST_COMMIT_MESSAGE" value="JDBC Template" />
+    <MESSAGE value="Properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Properties" />
   </component>
 </project>
