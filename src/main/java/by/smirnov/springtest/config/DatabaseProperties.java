@@ -14,7 +14,7 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:database.properties")
 public class DatabaseProperties {
 
-    @Value("${POSTRGES_DRIVER_NAME}") //SpEL - Spring Expression language
+    @Value("${POSTGRES_DRIVER_NAME}") //SpEL - Spring Expression language
     private String driverName;
 
     @Value("${DATABASE_URL}")
