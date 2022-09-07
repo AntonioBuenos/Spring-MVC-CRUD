@@ -9,11 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="965f18a4-4f5b-4f81-a5e7-250d7608938a" name="Changes" comment="ID autoincrement added.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/smirnov/springtest/util/PersonValidator.java" afterDir="false" />
+    <list default="true" id="965f18a4-4f5b-4f81-a5e7-250d7608938a" name="Changes" comment="Person unique email validator added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/smirnov/springtest/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/smirnov/springtest/controllers/PeopleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/smirnov/springtest/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/smirnov/springtest/dao/PersonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/smirnov/springtest/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/smirnov/springtest/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,7 +325,7 @@
       <workItem from="1661287791080" duration="28905000" />
       <workItem from="1661593872860" duration="3079000" />
       <workItem from="1661633576372" duration="18834000" />
-      <workItem from="1662441190009" duration="10677000" />
+      <workItem from="1662441190009" duration="13267000" />
     </task>
     <task id="LOCAL-00001" summary="DAO">
       <created>1661245839381</created>
@@ -403,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662448246628</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Person unique email validator added.">
+      <created>1662529813001</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1662529813001</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,6 +440,7 @@
     <MESSAGE value="Properties 2" />
     <MESSAGE value="Batch Update test added." />
     <MESSAGE value="ID autoincrement added." />
-    <option name="LAST_COMMIT_MESSAGE" value="ID autoincrement added." />
+    <MESSAGE value="Person unique email validator added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Person unique email validator added." />
   </component>
 </project>
